@@ -1,0 +1,61 @@
+---
+// @ts-ignore
+import { Icon } from "astro-icon/components";
+
+const featuresparticuliers = [
+  {
+    title: "PC gaming sur mesure",
+    description:
+      "Créez votre PC gaming idéal avec des configurations adaptées à vos besoins. Nous vous conseillons et assemblons votre machine pour des performances optimales.",
+    icon: "bx:bx-desktop",
+  },
+  {
+    title: "Vente de matériel informatique",
+    description:
+      "Nous proposons une large gamme de produits, allant des ordinateurs de bureau et portables aux périphériques et accessoires, avec installation et configuration personnalisées.",
+    icon: "bx:bxs-cart",
+  },
+  {
+    title: "Assistance informatique et réparation",
+    description:
+      "Diagnostic des pannes, réparation de matériel, nettoyage de virus et optimisation des performances, pour un système toujours performant.",
+    icon: "bx:bxs-wrench",
+  },
+  {
+    title: "Optimisation du réseau Wi-Fi",
+    description:
+      "Profitez d'une connexion rapide et stable grâce à notre optimisation de réseau Wi-Fi. Analyse, réglages et installation d'équipements pour une couverture maximale.",
+    icon: "bx:bx-wifi",
+  },
+  {
+    title: "Maintenance et dépannage à distance et sur site",
+    description:
+      "Assistance téléphonique, gestion des mises à jour logicielles, monitoring à distance et gestion des sauvegardes pour une maintenance optimale.",
+    icon: "bx:bxs-server",
+  },
+  {
+    title: "Formation et conseils personnalisés",
+    description:
+      "Apprenez à mieux utiliser vos outils informatiques et bénéficiez de conseils adaptés à vos besoins, pour une utilisation optimale de votre matériel et de vos logiciels.",
+    icon: "bx:bxs-book",
+  },
+];
+
+---
+
+
+<div class="grid sm:grid-cols-2 md:grid-cols-3 mt-16 gap-16">
+  {
+    featuresparticuliers.map((item) => (
+      <div class="flex gap-4 items-start">
+        <div class="mt-1 bg-black rounded-full p-2 w-8 h-8 shrink-0">
+          <Icon class="text-white" name={item.icon} />
+        </div>
+        <div>
+          <h3 class="font-semibold text-lg">{item.title}</h3>
+          <p class="text-slate-500 mt-2 leading-relaxed">{item.description}</p>
+        </div>
+      </div>
+    ))
+  }
+</div>

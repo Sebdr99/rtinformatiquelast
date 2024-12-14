@@ -1,0 +1,90 @@
+---
+import Layout from "@layouts/Layout.astro";
+import Container from "@components/container.astro";
+import Sectionhead from "@components/sectionhead.astro";
+
+const services = [
+  {
+    name: "Design personnalisé",
+    features: [
+      "Création de sites sur mesure avec un design unique.",
+      "Adaptation aux couleurs et à la charte graphique de votre entreprise.",
+      "Sites web responsifs adaptés aux mobiles et tablettes.",
+      "Optimisation UX/UI pour une expérience utilisateur fluide.",
+    ],
+  },
+  {
+    name: "Développement e-commerce",
+    features: [
+      "Intégration de solutions e-commerce complètes (paiement, catalogue).",
+      "Système de gestion de produits simple à utiliser.",
+      "Mise en place de stratégies pour booster les ventes en ligne.",
+      "Personnalisation des fiches produits et des pages de paiement.",
+    ],
+  },
+  {
+    name: "Optimisation SEO",
+    features: [
+      "Optimisation des balises et contenus pour un bon référencement.",
+      "Audit SEO complet pour améliorer la visibilité sur Google.",
+      "Optimisation des temps de chargement pour une meilleure performance.",
+      "Suivi et ajustement SEO pour rester en tête des résultats de recherche.",
+    ],
+  },
+  {
+    name: "Création de contenu",
+    features: [
+      "Création de pages vitrines pour promouvoir vos produits et services.",
+      "Rédaction de blogs optimisés pour le SEO.",
+      "Conception de landing pages pour générer des conversions.",
+      "Contenus visuels et textuels personnalisés pour votre audience.",
+    ],
+  },
+  {
+    name: "Maintenance de site",
+    features: [
+      "Suivi régulier pour les mises à jour et les correctifs de sécurité.",
+      "Sauvegarde automatique de vos données pour éviter toute perte.",
+      "Support technique disponible pour résoudre les problèmes éventuels.",
+      "Surveillance de la performance et du bon fonctionnement du site.",
+    ],
+  },
+  {
+    name: "Intégration des API et services tiers",
+    features: [
+      "Intégration des API de paiement sécurisé et des solutions de livraison.",
+      "Connexion avec des plateformes de CRM et outils marketing.",
+      "Mise en place de solutions d'emailing et de gestion de newsletter.",
+      "Automatisation des processus pour optimiser vos flux de travail.",
+    ],
+  },
+];
+---
+
+<Layout title="Création de site internet vitrine et e-commerce">
+  <Container>
+    <Sectionhead>
+      <Fragment slot="title">Création de site internet vitrine et e-commerce</Fragment>
+      <Fragment slot="desc">Nous concevons des sites web professionnels et sur mesure pour vitrine ou e-commerce. Augmentez votre visibilité en ligne avec nos solutions adaptées à vos besoins.</Fragment>
+    </Sectionhead>
+
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mx-auto max-w-screen-lg mt-12">
+      {services.map((service) => (
+        <div class="flex flex-col border-2 border-gray-300 p-6 rounded-md">
+          <h4 class="text-xl font-bold text-gray-800 mb-4">{service.name}</h4>
+          <ul class="list-disc pl-5 space-y-2 text-gray-600">
+            {service.features.map((feature) => (
+              <li>{feature}</li>
+            ))}
+          </ul>
+        </div>
+      ))}
+    </div>
+
+    <div class="text-center mt-12">
+      <a href="/contact" class="inline-block px-8 py-4 bg-black text-white rounded-lg font-semibold hover:bg-gray-800 transition">
+        Contactez-nous dès aujourd'hui
+      </a>
+    </div>
+  </Container>
+</Layout>

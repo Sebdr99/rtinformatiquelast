@@ -1,0 +1,91 @@
+---
+import Layout from "@layouts/Layout.astro";
+import Container from "@components/container.astro";
+import Sectionhead from "@components/sectionhead.astro";
+
+
+const services = [
+  {
+    name: "Ordinateurs et périphériques",
+    features: [
+      "Ordinateurs de bureau et portables de marques reconnues.",
+      "Périphériques : souris, claviers, écrans, imprimantes, et plus.",
+      "Composants informatiques pour des upgrades sur mesure.",
+      "Accessoires divers pour améliorer votre expérience utilisateur.",
+    ],
+  },
+  {
+    name: "Conseil personnalisé",
+    features: [
+      "Évaluation de vos besoins pour choisir le matériel adapté.",
+      "Solutions pour les particuliers, PME, et grandes entreprises.",
+      "Réponses techniques sur les produits les plus performants.",
+      "Optimisation de votre parc informatique selon votre budget.",
+    ],
+  },
+  {
+    name: "Composants et accessoires",
+    features: [
+      "Large choix de disques durs, SSD, barrettes de RAM, et CPU.",
+      "Composants réseaux pour une connexion performante et stable.",
+      "Cartes graphiques, boîtiers et alimentations pour gaming ou bureautique.",
+      "Périphériques de stockage et solutions de sauvegarde.",
+    ],
+  },
+  {
+    name: "Livraison rapide",
+    features: [
+      "Livraison en 24 à 48h pour les commandes passées avant 15h.",
+      "Possibilité de livraison sur site pour les entreprises.",
+      "Suivi de commande en temps réel grâce à notre service client.",
+      "Options de livraison express pour les commandes urgentes.",
+    ],
+  },
+  {
+    name: "Service après-vente",
+    features: [
+      "Support technique en cas de panne ou de problème matériel.",
+      "Garantie sur tous les produits achetés.",
+      "Assistance pour les échanges ou remboursements rapides.",
+      "Réparation ou remplacement des pièces défectueuses.",
+    ],
+  },
+  {
+    name: "Installation et configuration",
+    features: [
+      "Assistance pour la configuration de vos ordinateurs et réseaux.",
+      "Installation sur site pour les clients professionnels.",
+      "Tests de performance et ajustement des paramètres.",
+      "Formation de base sur l’utilisation du matériel.",
+    ],
+  },
+];
+---
+
+<Layout title="Vente de matériel informatique">
+  <Container>
+    <Sectionhead>
+      <Fragment slot="title">Vente de matériel informatique</Fragment>
+      <Fragment slot="desc">Nous proposons une large gamme de matériel informatique pour particuliers et professionnels. Que vous ayez besoin d'un PC, d'une imprimante, ou d'accessoires, nous avons tout ce qu'il vous faut. Livraison rapide sous 24 à 48h si commande passée avant 15h.</Fragment>
+    </Sectionhead>
+
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mx-auto max-w-screen-lg mt-12">
+      {services.map((service) => (
+        <div class="flex flex-col border-2 border-gray-300 p-6 rounded-md">
+          <h4 class="font-bold text-gray-800 mb-4">{service.name}</h4>
+          <ul class="list-disc pl-5 space-y-2 text-gray-600">
+            {service.features.map((feature) => (
+              <li>{feature}</li>
+            ))}
+          </ul>
+        </div>
+      ))}
+    </div>
+
+    <div class="text-center mt-12">
+      <a href="/contact" class="inline-block px-8 py-4 bg-black text-white rounded-lg font-semibold hover:bg-gray-800 transition">
+        Contactez-nous dès aujourd'hui
+      </a>
+    </div>
+  </Container>
+</Layout>

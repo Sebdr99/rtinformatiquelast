@@ -1,0 +1,90 @@
+---
+import Layout from "@layouts/Layout.astro";
+import Container from "@components/container.astro";
+import Sectionhead from "@components/sectionhead.astro";
+
+const services = [
+  {
+    name: "Maintenance préventive",
+    features: [
+      "Surveillance proactive pour prévenir les pannes.",
+      "Vérification régulière des systèmes pour détecter les anomalies.",
+      "Mise à jour des logiciels pour garantir la sécurité et la performance.",
+      "Optimisation des configurations pour éviter les ralentissements.",
+    ],
+  },
+  {
+    name: "Dépannage à distance",
+    features: [
+      "Interventions à distance pour résoudre les problèmes rapidement.",
+      "Support via des outils de prise en main sécurisée.",
+      "Dépannage instantané sans besoin de déplacement.",
+      "Assistance pour la gestion des incidents logiciels et matériels.",
+    ],
+  },
+  {
+    name: "Intervention sur site",
+    features: [
+      "Déplacement rapide pour résoudre les problèmes matériels complexes.",
+      "Réparation des pannes critiques directement sur site.",
+      "Remplacement des composants défectueux.",
+      "Assistance et diagnostic complet des infrastructures réseau.",
+    ],
+  },
+  {
+    name: "Gestion des mises à jour",
+    features: [
+      "Installation et gestion des mises à jour logicielles et système.",
+      "Vérification de la compatibilité des mises à jour avec votre matériel.",
+      "Automatisation des mises à jour pour garantir la continuité du service.",
+      "Optimisation des configurations après chaque mise à jour.",
+    ],
+  },
+  {
+    name: "Plan de continuité informatique",
+    features: [
+      "Mise en place de solutions pour éviter les interruptions de service.",
+      "Plans de récupération en cas de panne majeure.",
+      "Mise en œuvre de sauvegardes automatiques régulières.",
+      "Test et simulation de pannes pour garantir l'efficacité des plans.",
+    ],
+  },
+  {
+    name: "Surveillance 24/7",
+    features: [
+      "Surveillance continue des infrastructures critiques.",
+      "Détection des anomalies et alerte en temps réel.",
+      "Mise en place de systèmes de monitoring automatisé.",
+      "Intervention immédiate en cas de problème détecté.",
+    ],
+  },
+];
+---
+
+<Layout title="Maintenance et dépannage à distance et sur site">
+  <Container>
+    <Sectionhead>
+      <Fragment slot="title">Maintenance et dépannage à distance et sur site</Fragment>
+      <Fragment slot="desc">Nous assurons la maintenance et le dépannage de vos systèmes informatiques, à distance ou sur site, pour garantir le bon fonctionnement de vos infrastructures.</Fragment>
+    </Sectionhead>
+
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mx-auto max-w-screen-lg mt-12">
+      {services.map((service) => (
+        <div class="flex flex-col border-2 border-gray-300 p-6 rounded-md">
+          <h4 class="font-bold text-gray-800 mb-4">{service.name}</h4>
+          <ul class="list-disc pl-5 space-y-2 text-gray-600">
+            {service.features.map((feature) => (
+              <li>{feature}</li>
+            ))}
+          </ul>
+        </div>
+      ))}
+    </div>
+
+    <div class="text-center mt-12">
+      <a href="/contact" class="inline-block px-8 py-4 bg-black text-white rounded-lg font-semibold hover:bg-gray-800 transition">
+        Contactez-nous dès aujourd'hui
+      </a>
+    </div>
+  </Container>
+</Layout>

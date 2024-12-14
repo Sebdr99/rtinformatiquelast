@@ -1,0 +1,67 @@
+---
+// @ts-ignore
+import { Icon } from "astro-icon/components";
+
+const features = [
+  {
+    title: "Vente de matériel informatique",
+    description:
+      "Nous proposons une large gamme de produits, allant des ordinateurs de bureau et portables aux périphériques et accessoires, avec installation et configuration sur-mesure.",
+    icon: "bx:bxs-cart",
+  },
+  {
+    title: "Assistance informatique et dépannage",
+    description:
+      "Diagnostic des pannes, réparation de matériel, nettoyage de virus et optimisation des performances, pour un système toujours performant.",
+    icon: "bx:bxs-wrench",
+  },
+  {
+    title: "Création de sites internet vitrine et e-commerce",
+    description:
+      "Conception de sites web avec un design responsive, intégration de systèmes de paiement, gestion de contenu simplifiée et stratégie digitale.",
+    icon: "bx:bxs-window-alt",
+  },
+  {
+    title: "Audit et conseils en transformation digitale",
+    description:
+      "Nous réalisons un audit complet de vos outils actuels et vous proposons des recommandations pour une transition numérique réussie, accompagnée d'une formation adaptée.",
+    icon: "bx:bxs-analyse",
+  },
+  {
+    title: "Maintenance et dépannage à distance et sur site",
+    description:
+      "Assistance téléphonique, gestion des mises à jour logicielles, monitoring à distance et gestion des sauvegardes pour une maintenance optimale.",
+    icon: "bx:bxs-server",
+  },
+  {
+    title: "Développement d'applications web",
+    description:
+      "Nous développons des applications web progressives, des portails clients et intégrons des API, avec tests et déploiement complet.",
+    icon: "bx:bx-terminal",
+  },
+];
+---
+
+<div class="mt-16 md:mt-0">
+  <h2 class="text-4xl lg:text-5xl font-bold lg:tracking-tight">
+    Nos solutions à vos problèmes informatiques
+  </h2>
+  <p class="text-lg mt-4 text-slate-600">
+    Chez RT Informatique, nous utilisons des outils de pointe et des technologies innovantes pour vous offrir des solutions informatiques performantes et optimisées. Nous allions expertise technique et innovation pour vous fournir des solutions sur mesure, adaptées à vos besoins  </p>
+</div>
+
+<div class="grid sm:grid-cols-2 md:grid-cols-3 mt-16 gap-16">
+  {
+    features.map((item) => (
+      <div class="flex gap-4 items-start">
+        <div class="mt-1 bg-black rounded-full  p-2 w-8 h-8 shrink-0">
+          <Icon class="text-white" name={item.icon} />
+        </div>
+        <div>
+          <h3 class="font-semibold text-lg">{item.title}</h3>{" "}
+          <p class="text-slate-500 mt-2 leading-relaxed">{item.description}</p>
+        </div>
+      </div>
+    ))
+  }
+</div>

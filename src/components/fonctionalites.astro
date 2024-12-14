@@ -1,0 +1,69 @@
+---
+
+import { Icon } from "astro-icon/components";
+
+const features = [
+  {
+    title: "Design adaptatif",
+    link: "/design-adaptatif",
+    description:
+      "Nos sites web sont conçus pour s’adapter à toutes les tailles d’écran, garantissant une expérience utilisateur fluide et cohérente sur mobile, tablette et desktop. Le design réactif assure que votre contenu reste accessible et attrayant, peu importe l’appareil utilisé.",
+    icon: "bx:bxs-devices", 
+  },
+  {
+    title: "Optimisation SEO",
+    description:
+      "Nous appliquons les meilleures pratiques SEO pour améliorer la visibilité de votre site sur les moteurs de recherche. Du balisage sémantique à l'optimisation des images et des temps de chargement, nous veillons à ce que votre site soit bien positionné et attire un trafic qualifié.",
+    icon: "bx:bxs-bar-chart-alt-2", 
+  },
+  {
+    title: "Vitesse de chargement optimisée",
+    description:
+      "La rapidité de chargement est cruciale pour offrir une bonne expérience utilisateur et améliorer votre référencement. Nos techniques de développement minimisent les temps de chargement afin que vos visiteurs accèdent rapidement à vos contenus, même avec une connexion lente.",
+    icon: "bx:bxs-timer", 
+  },
+  {
+    title: "Intégration CMS",
+    description:
+      "Nous intégrons les CMS les plus performants comme WordPress, Joomla, ou encore des solutions sur-mesure pour vous permettre de gérer facilement votre contenu et d’ajuster votre site selon vos besoins, en toute autonomie.",
+    icon: "bx:bxs-cog", 
+  },
+  {
+    title: "Sécurité renforcée",
+    description:
+      "Nos solutions intègrent des protocoles de sécurité avancés pour protéger votre site contre les menaces et les vulnérabilités en ligne. Nous assurons la protection des données sensibles et veillons à la conformité avec les réglementations en vigueur.",
+    icon: "bx:bxs-lock-alt", 
+  },
+  {
+    title: "Maintenance continue",
+    description:
+      "Votre site nécessite une attention régulière pour garantir son bon fonctionnement. Nous proposons des services de maintenance pour résoudre les bugs, mettre à jour les fonctionnalités et assurer la sécurité de votre site en temps réel.",
+    icon: "bx:bxs-wrench", 
+  },
+];
+---
+
+<div class="mt-16 md:mt-0">
+  <h2 class="text-4xl lg:text-5xl font-bold lg:tracking-tight">
+    Des solutions informatiques à votre mesure  </h2>
+  <p class="text-lg mt-4 text-slate-600">
+    Intégrez des outils et des ressources variés pour optimiser votre infrastructure informatique, tout en assurant des performances maximales. Notre expertise vous garantit une architecture robuste, adaptée à vos besoins, et optimisée pour une gestion efficace.
+
+    Prenez en main votre transformation numérique dès aujourd'hui !  </p>
+</div>
+
+<div class="grid sm:grid-cols-2 md:grid-cols-3 mt-16 gap-16">
+  {
+    features.map((item) => (
+      <div class="flex gap-4 items-start">
+        <div class="mt-1 bg-black rounded-full p-2 w-8 h-8 shrink-0">
+          <Icon class="text-white" name={item.icon} />
+        </div>
+        <div>
+          <h3 class="font-semibold text-lg">{item.title}</h3>
+          <p class="text-slate-500 mt-2 leading-relaxed">{item.description}</p>
+        </div>
+      </div>
+    ))
+  }
+</div>

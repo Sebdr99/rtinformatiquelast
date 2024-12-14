@@ -1,0 +1,113 @@
+---
+import Layout from "@layouts/Layout.astro";
+import Container from "@components/container.astro";
+import Sectionhead from "@components/sectionhead.astro";
+import PricingCard from "@components/Nosservices.astro";
+
+const pricing = [
+  {
+    name: "Vente de matériel informatique",
+    popular: false,
+    features: [
+      "large gamme de produits",
+      "ordinateurs de bureau et portables",
+      "périphériques et accessoires",
+      "installation et configuration",
+    ],
+    button: {
+      text: "En savoir plus",
+      link: "/vente-de-materiel-informatique",
+    },
+  },
+  {
+    name: "Assistance informatique et dépannage",
+  
+    popular: false,
+    features: [
+      "diagnostic des pannes",
+      "réparation de matériel",
+      "nettoyage de virus",
+      "optimisation des performances",
+    ],
+    button: {
+      text: "En savoir plus",
+      link: "/assistance-informatique-et-depannage",
+    },
+  },
+  {
+    name: "Création de site internet vitrine et e-commerce",
+    popular: false,
+    features: [
+      "design responsive",
+      "intégration de systèmes de paiement",
+      "gestion de contenu simplifiée",
+      "stratégie de contenu",
+    ],
+    button: {
+      text: "En savoir plus",
+      link: "/creation-de-site-internet-vitrine-et-e-commerce",
+    },
+  },
+
+  {
+    name: "Audit et conseils en transformation digitale",
+    popular: false,
+    features: [
+      "audit complet",
+      "analyse des outils actuels",
+      "recommandations d’outils digitaux ",
+      "formation des équipes",
+    ],
+    button: {
+      text: "En savoir plus",
+      link: "/audit-et-transformation-digitale",
+    },
+  },
+
+  {
+    name: "Maintenance et dépannage à distance et sur site",
+    popular: false,
+    features: [
+      "assistance téléphonique",
+      "gestion des mises à jour logicielles",
+      "monitoring à distance",
+      "gestion des sauvegardes",
+    ],
+    button: {
+      text: "En savoir plus",
+      link: "/maintenance-et-depannage-a-distance-et-sur-site",
+    },
+  },
+
+  {
+    name: "Développement d'applications web",
+    popular: false,
+    features: [
+      "applications web progressives",
+      "portails clients",
+      "intégration d'api",
+      "tests et déploiement",
+    ],
+    button: {
+      text: "En savoir plus",
+      link: "/developpement-d-applications-web",
+    },
+  },
+
+
+];
+---
+
+<Layout title="Nos services">
+  <Container>
+    <Sectionhead>
+      <Fragment slot="title">Nos services</Fragment>
+      <Fragment slot="desc">
+      </Fragment>
+    </Sectionhead>
+
+    <div class="grid md:grid-cols-3 gap-10 mx-auto max-w-screen-lg mt-12">
+      {pricing.map((item) => <PricingCard plan={item} />)}
+    </div>
+  </Container>
+</Layout>

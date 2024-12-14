@@ -1,0 +1,90 @@
+---
+import Layout from "@layouts/Layout.astro";
+import Container from "@components/container.astro";
+import Sectionhead from "@components/sectionhead.astro";
+
+const services = [
+  {
+    name: "Applications web progressives (PWA)",
+    features: [
+      "Développement d'applications accessibles depuis n'importe quel appareil.",
+      "Fonctionnalités hors ligne pour une meilleure expérience utilisateur.",
+      "Performance optimisée grâce à la mise en cache intelligente.",
+      "Interface utilisateur intuitive et design responsive.",
+    ],
+  },
+  {
+    name: "Portails clients personnalisés",
+    features: [
+      "Création de portails clients sécurisés pour la gestion des services.",
+      "Intégration de systèmes de facturation et de paiement.",
+      "Accès personnalisé pour chaque utilisateur avec des droits spécifiques.",
+      "Interface simple et intuitive pour faciliter les échanges.",
+    ],
+  },
+  {
+    name: "Intégration d'API tierces",
+    features: [
+      "Connexion avec des services externes (paiements, CRM, etc.).",
+      "Intégration de systèmes d'analyse de données et de reporting.",
+      "Mise en place d'automatisations grâce aux API RESTful.",
+      "Synchronisation en temps réel des données entre les services.",
+    ],
+  },
+  {
+    name: "Développement sur mesure",
+    features: [
+      "Applications conçues spécifiquement pour répondre à vos besoins.",
+      "Utilisation des dernières technologies pour garantir la pérennité.",
+      "Code optimisé pour des performances maximales.",
+      "Développement agile avec des itérations rapides.",
+    ],
+  },
+  {
+    name: "Tests et déploiement",
+    features: [
+      "Test complet des applications avant le déploiement.",
+      "Assurance qualité pour garantir un fonctionnement sans faille.",
+      "Déploiement sur des environnements sécurisés.",
+      "Suivi post-lancement pour corriger les éventuels bugs.",
+    ],
+  },
+  {
+    name: "Support et maintenance",
+    features: [
+      "Suivi continu pour garantir la disponibilité des applications.",
+      "Mises à jour régulières pour intégrer de nouvelles fonctionnalités.",
+      "Correction des bugs et optimisation des performances.",
+      "Support technique disponible 24/7 pour les utilisateurs.",
+    ],
+  },
+];
+---
+
+<Layout title="Développement d'applications web">
+  <Container>
+    <Sectionhead>
+      <Fragment slot="title">Développement d'applications web</Fragment>
+      <Fragment slot="desc">Nous développons des applications web sur mesure, adaptées à vos besoins spécifiques, en utilisant les dernières technologies pour une performance optimale.</Fragment>
+    </Sectionhead>
+
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mx-auto max-w-screen-lg mt-12">
+      {services.map((service) => (
+        <div class="flex flex-col border-2 border-gray-300 p-6 rounded-md">
+          <h4 class="text-xl font-bold text-gray-800 mb-4">{service.name}</h4>
+          <ul class="list-disc pl-5 space-y-2 text-gray-600">
+            {service.features.map((feature) => (
+              <li>{feature}</li>
+            ))}
+          </ul>
+        </div>
+      ))}
+    </div>
+
+    <div class="text-center mt-12">
+      <a href="/contact" class="inline-block px-8 py-4 bg-black text-white rounded-lg font-semibold hover:bg-gray-800 transition">
+        Contactez-nous dès aujourd'hui
+      </a>
+    </div>
+  </Container>
+</Layout>

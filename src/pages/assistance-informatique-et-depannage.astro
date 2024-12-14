@@ -1,0 +1,90 @@
+---
+import Layout from "@layouts/Layout.astro";
+import Container from "@components/container.astro";
+import Sectionhead from "@components/sectionhead.astro";
+
+const services = [
+  {
+    name: "Diagnostic des pannes",
+    features: [
+      "Identification rapide des problèmes matériels et logiciels.",
+      "Tests de performance pour détecter les anomalies.",
+      "Analyse des erreurs systèmes pour éviter les pannes futures.",
+      "Rapport détaillé après chaque diagnostic pour mieux comprendre.",
+    ],
+  },
+  {
+    name: "Réparation de matériel",
+    features: [
+      "Réparation et remplacement des pièces défectueuses.",
+      "Service rapide avec des pièces d'origine ou compatibles.",
+      "Optimisation des performances après réparation.",
+      "Récupération des données avant la réparation matérielle.",
+    ],
+  },
+  {
+    name: "Nettoyage de virus et malwares",
+    features: [
+      "Suppression complète de virus et logiciels malveillants.",
+      "Installation d'antivirus pour éviter de nouvelles infections.",
+      "Optimisation des performances après désinfection.",
+      "Conseils de sécurité pour éviter les futures menaces.",
+    ],
+  },
+  {
+    name: "Support technique multiplateforme",
+    features: [
+      "Assistance sur Windows, MacOS, Linux, et autres systèmes.",
+      "Aide à la configuration de vos appareils et réseaux.",
+      "Synchronisation et configuration de périphériques.",
+      "Support à distance pour une assistance immédiate.",
+    ],
+  },
+  {
+    name: "Réactivité d'urgence",
+    features: [
+      "Intervention rapide pour les pannes critiques.",
+      "Dépannage à distance ou sur site selon vos besoins.",
+      "Service de remplacement de matériel en cas d'urgence.",
+      "Mise en place de plans de continuité informatique.",
+    ],
+  },
+  {
+    name: "Récupération de données",
+    features: [
+      "Récupération de données sur disques durs et autres supports.",
+      "Restauration après une perte de données critiques.",
+      "Mise en place de solutions de sauvegarde automatique.",
+      "Audit de la gestion des données pour éviter les pertes futures.",
+    ],
+  },
+];
+---
+
+<Layout title="Assistance informatique et dépannage">
+  <Container>
+    <Sectionhead>
+      <Fragment slot="title">Assistance informatique et dépannage</Fragment>
+      <Fragment slot="desc">Notre équipe vous aide à diagnostiquer et réparer rapidement vos équipements. Que ce soit pour un dépannage à distance ou une intervention sur site, nous vous offrons un support technique réactif et efficace.</Fragment>
+    </Sectionhead>
+
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mx-auto max-w-screen-lg mt-12">
+      {services.map((service) => (
+        <div class="flex flex-col border-2 border-gray-300 p-6 rounded-md">
+          <h4 class=" font-bold text-gray-800 mb-4">{service.name}</h4>
+          <ul class="list-disc pl-5 space-y-2 text-gray-600">
+            {service.features.map((feature) => (
+              <li>{feature}</li>
+            ))}
+          </ul>
+        </div>
+      ))}
+    </div>
+
+    <div class="text-center mt-12">
+      <a href="/contact" class="inline-block px-8 py-4 bg-black text-white rounded-lg font-semibold hover:bg-gray-800 transition">
+        Contactez-nous dès aujourd'hui
+      </a>
+    </div>
+  </Container>
+</Layout>

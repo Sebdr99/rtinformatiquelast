@@ -1,0 +1,65 @@
+---
+// @ts-ignore
+import { Icon } from "astro-icon/components";
+
+const features = [
+  {
+    title: "Optimisation de l'infrastructure informatique",
+    description:
+      "Un écosystème informatique lent réduit la productivité de vos équipes. Nous analysons, réorganisons et optimisons votre infrastructure pour des performances maximales.",
+    icon: "bx:bx-network-chart",
+  },
+  {
+    title: "Vente et installation de matériel professionnel",
+    description:
+      "Nous proposons du matériel informatique de pointe adapté aux besoins des professionnels : serveurs, postes de travail, périphériques, et plus encore, avec installation clé en main.",
+    icon: "bx:bxs-cart",
+  },
+  {
+    title: "Support technique et dépannage",
+    description:
+      "Interventions rapides pour résoudre vos problèmes techniques, que ce soit sur site ou à distance. Réparations, mises à jour et optimisation pour une continuité de service garantie.",
+    icon: "bx:bxs-wrench",
+  },
+  {
+    title: "Protection avancée des données",
+    description:
+      "Mettez vos données à l'abri avec des solutions de sécurité de pointe. Nous intégrons des pare-feu, des sauvegardes automatisées et une surveillance proactive pour une tranquillité d'esprit totale.",
+    icon: "bx:bx-shield",
+  },
+  {
+    title: "Création de sites internet et webmarketing",
+    description:
+      "Augmentez votre visibilité en ligne avec des sites internet professionnels, optimisés pour le SEO et adaptés à vos objectifs. Nous vous accompagnons dans la gestion de campagnes webmarketing pour attirer et fidéliser vos clients.",
+    icon: "bx:bx-globe",
+  },
+  {
+    title: "Maintenance proactive et monitoring",
+    description:
+      "Évitez les interruptions grâce à une maintenance proactive et un monitoring constant de vos systèmes. Nous anticipons les problèmes pour garantir un fonctionnement optimal.",
+    icon: "bx:bxs-server",
+  },
+];
+---
+<div class="mt-16 md:mt-0">
+  
+  <p class="text-lg mt-4 text-slate-600">
+    Chez RT Informatique, nous comprenons l'importance d'une infrastructure performante pour la productivité de vos équipes. Nos services vous aident à tirer le meilleur parti de votre matériel et de vos logiciels, tout en assurant la sécurité et la continuité de vos activités.
+  </p>
+</div>
+
+<div class="grid sm:grid-cols-2 md:grid-cols-3 mt-16 gap-16">
+  {
+    features.map((item) => (
+      <div class="flex gap-4 items-start">
+        <div class="mt-1 bg-black rounded-full p-2 w-8 h-8 shrink-0">
+          <Icon class="text-white" name={item.icon} />
+        </div>
+        <div>
+          <h3 class="font-semibold text-lg">{item.title}</h3>
+          <p class="text-slate-500 mt-2 leading-relaxed">{item.description}</p>
+        </div>
+      </div>
+    ))
+  }
+</div>
