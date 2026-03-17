@@ -4,7 +4,7 @@ import Layout from "@layouts/Layout.astro";
 import Container from "@components/container.astro";
 import Sectionhead from "@components/sectionhead.astro";
 import { Image } from 'astro:assets';
-import sebPhoto from '../src/assets/sebPhoto.png'; // Import de l'image locale
+import sebPhoto from '../assets/sebPhoto.png'; // Import de l'image locale
 
 // Filtrer les membres de l'équipe avec 'draft: false' & une date antérieure à la date actuelle
 const publishedTeamMembers = await getCollection("team", ({ data }) => {
@@ -12,7 +12,7 @@ const publishedTeamMembers = await getCollection("team", ({ data }) => {
 });
 ---
 
-<Layout title="À propos">
+<Layout title="À propos de RT Informatique — Expert informatique Gas, Maintenon" description="RT Informatique, société de services informatiques basée à Gas (28320) près de Maintenon. Sébastien DOS REIS, votre expert informatique local en Eure-et-Loir et Yvelines.">
   <Container>
     <Sectionhead>
       <Fragment slot="title">À propos</Fragment>
@@ -47,8 +47,29 @@ const publishedTeamMembers = await getCollection("team", ({ data }) => {
         <li>Expertise éprouvée dans le domaine de l’informatique.</li>
         <li>Solutions personnalisées adaptées à vos besoins spécifiques.</li>
         <li>Support technique réactif et disponible.</li>
-        <li>Engagement envers l'innovation et l'efficacité.</li>
+        <li>Engagement envers l’innovation et l’efficacité.</li>
       </ul>
+
+      <h2 class="font-bold text-3xl text-gray-800 mt-8">
+        Notre zone d’intervention
+      </h2>
+      <p class="text-lg leading-relaxed text-slate-500">
+        Basés à <strong>Gas (28320)</strong>, nous intervenons dans un rayon de 30 km autour de notre siège, en <strong>Eure-et-Loir (28)</strong> et en <strong>Yvelines (78)</strong>.
+      </p>
+      <ul class="list-disc pl-5 text-lg leading-relaxed text-slate-500">
+        <li>Gas — siège social</li>
+        <li>Maintenon</li>
+        <li>Épernon</li>
+        <li>Chartres</li>
+        <li>Rambouillet</li>
+        <li>Gallardon</li>
+        <li>Nogent-le-Roi</li>
+        <li>Auneau</li>
+        <li>Et toutes les communes dans un rayon de 30 km en Eure-et-Loir (28) et Yvelines (78)</li>
+      </ul>
+      <p class="text-lg leading-relaxed text-slate-500">
+        Vous avez un doute sur notre zone de couverture ? <a href="/contact" class="text-black underline hover:text-gray-600">Contactez-nous</a>, nous ferons tout notre possible pour intervenir chez vous.
+      </p>
     </div>
 
     <div class="text-center mt-12">

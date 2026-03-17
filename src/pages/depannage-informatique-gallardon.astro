@@ -1,0 +1,88 @@
+---
+import Layout from "@layouts/Layout.astro";
+import Container from "@components/container.astro";
+import Sectionhead from "@components/sectionhead.astro";
+---
+
+<Layout
+  title="Dépannage informatique à Gallardon (28320) — RT Informatique"
+  description="Technicien informatique à Gallardon (28320 Eure-et-Loir). RT Informatique assure le dépannage, la maintenance et la vente de matériel informatique à Gallardon et alentours. Tel: 06 03 21 33 65."
+>
+  <Container>
+    <Sectionhead>
+      <Fragment slot="title">Dépannage informatique à Gallardon (28320)</Fragment>
+      <Fragment slot="desc">RT Informatique, votre spécialiste en dépannage et maintenance informatique à Gallardon — intervention rapide chez vous ou en entreprise.</Fragment>
+    </Sectionhead>
+
+    <div class="mx-auto max-w-4xl mt-12">
+
+      <!-- Intro locale -->
+      <div class="mb-10">
+        <h2 class="font-bold text-2xl text-gray-800 mb-4">RT Informatique intervient à Gallardon</h2>
+        <p class="text-lg leading-relaxed text-slate-500">
+          Gallardon, village médiéval caractérisé par sa tour penchée — surnommée affectueusement "l'épaule de Gallardon" — est une commune du canton de Maintenon située à environ 13 km de Gas. Ce bourg rural de la Beauce chartraine regroupe des habitants attachés à un service de proximité et de confiance. RT Informatique s'inscrit parfaitement dans cet esprit : nous proposons un service personnalisé, avec un vrai technicien local qui connaît le territoire et ses habitants, pour résoudre vos problèmes informatiques sans jargon inutile.
+        </p>
+      </div>
+
+      <!-- Services proposés -->
+      <div class="mb-10">
+        <h2 class="font-bold text-2xl text-gray-800 mb-4">Nos services à Gallardon et alentours</h2>
+        <ul class="grid sm:grid-cols-2 gap-4 text-slate-600">
+          <li class="flex items-start gap-2 p-4 border border-gray-200 rounded-lg">
+            <span class="text-black font-bold">→</span>
+            <div><strong>Dépannage informatique</strong> — Diagnostic et réparation à domicile ou en entreprise</div>
+          </li>
+          <li class="flex items-start gap-2 p-4 border border-gray-200 rounded-lg">
+            <span class="text-black font-bold">→</span>
+            <div><strong>Vente de matériel</strong> — Ordinateurs, périphériques avec installation sur mesure</div>
+          </li>
+          <li class="flex items-start gap-2 p-4 border border-gray-200 rounded-lg">
+            <span class="text-black font-bold">→</span>
+            <div><strong>Maintenance & assistance</strong> — Mises à jour, monitoring, sauvegardes</div>
+          </li>
+          <li class="flex items-start gap-2 p-4 border border-gray-200 rounded-lg">
+            <span class="text-black font-bold">→</span>
+            <div><strong>Création de sites internet</strong> — Sites vitrine et e-commerce</div>
+          </li>
+        </ul>
+      </div>
+
+      <!-- Zone d'intervention -->
+      <div class="mb-10 bg-gray-50 p-6 rounded-lg">
+        <h2 class="font-bold text-2xl text-gray-800 mb-4">Zone d'intervention</h2>
+        <p class="text-slate-500">RT Informatique est basé à Gas (28320) et intervient à Gallardon et dans toutes les communes environnantes. La distance depuis notre base est d'environ 13 km.</p>
+        <p class="mt-3 text-slate-500">Nous couvrons également : Gas, Maintenon, Sours, Auneau et les villages du pays chartrain.</p>
+      </div>
+
+      <!-- FAQ locale -->
+      <div class="mb-10">
+        <h2 class="font-bold text-2xl text-gray-800 mb-4">Questions fréquentes — dépannage informatique à Gallardon</h2>
+        <div class="space-y-4">
+          <div class="p-4 border border-gray-200 rounded-lg">
+            <h3 class="font-semibold text-gray-800">Intervenez-vous à domicile à Gallardon ?</h3>
+            <p class="text-slate-500 mt-2">Oui, RT Informatique se déplace à domicile à Gallardon pour tous types de dépannages informatiques, PC, Mac, tablettes et problèmes de réseau.</p>
+          </div>
+          <div class="p-4 border border-gray-200 rounded-lg">
+            <h3 class="font-semibold text-gray-800">Quel est le délai d'intervention à Gallardon ?</h3>
+            <p class="text-slate-500 mt-2">Nous nous efforçons d'intervenir sous 24 à 48h à Gallardon. Pour les urgences, contactez-nous directement par téléphone.</p>
+          </div>
+          <div class="p-4 border border-gray-200 rounded-lg">
+            <h3 class="font-semibold text-gray-800">Proposez-vous le dépannage à distance pour les habitants de Gallardon ?</h3>
+            <p class="text-slate-500 mt-2">Oui, de nombreuses interventions peuvent être réalisées à distance via prise en main sécurisée, sans déplacement — pratique pour les petits problèmes logiciels ou les réglages système.</p>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- CTA -->
+    <div class="text-center mt-12 mb-8">
+      <p class="text-lg text-slate-600 mb-4">Vous êtes à Gallardon et avez besoin d'une assistance informatique ?</p>
+      <a href="/contact" class="inline-block px-8 py-4 bg-black text-white rounded-lg font-semibold hover:bg-gray-800 transition">
+        Demander une intervention
+      </a>
+      <p class="mt-3 text-slate-500">Ou appelez directement : <a href="tel:+33603213365" class="text-black font-semibold">06 03 21 33 65</a></p>
+    </div>
+
+  </Container>
+</Layout>

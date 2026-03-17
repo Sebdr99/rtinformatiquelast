@@ -5,12 +5,10 @@ import Navbar from "@components/navbar/navbar.astro";
 import "@fontsource-variable/inter/index.css";
 import '@fontsource-variable/bricolage-grotesque';
 
-
-
-
-
 export interface Props {
   title: string;
+  description?: string;
+  keywords?: string;
 }
 
 const canonicalURL = new URL(Astro.url.pathname, Astro.site).toString();
@@ -20,11 +18,56 @@ const resolvedImageWithDomain = new URL(
   Astro.site
 ).toString();
 
-const { title } = Astro.props;
+const { title, description, keywords } = Astro.props;
 
 const makeTitle = title
   ? title + " | " + "RT Informatique"
-  : "";
+  : "RT Informatique";
+
+const metaDescription = description
+  ? description
+  : "RT Informatique : solutions informatiques sur mesure à Chartres, Maintenon, Rambouillet et alentours, département Eure-et-Loir 28 et Yvelines 78. Vente de matériel informatique, assistance technique, dépannage à domicile et création de sites internet pour particuliers et professionnels. Contactez un expert local pour vos besoins numériques.";
+
+const localBusinessJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "LocalBusiness",
+  "name": "RT Informatique",
+  "description": "Expert informatique à Gas, Maintenon, Chartres, Rambouillet et dans un rayon de 30km en Eure-et-Loir (28) et Yvelines (78). Dépannage, vente de matériel, création de sites internet.",
+  "url": "https://rt-informatique.com",
+  "telephone": "+33603213365",
+  "email": "contact@awrt.fr",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "11 route des Moineaux",
+    "addressLocality": "Gas",
+    "postalCode": "28320",
+    "addressRegion": "Eure-et-Loir",
+    "addressCountry": "FR"
+  },
+  "geo": {
+    "@type": "GeoCoordinates",
+    "latitude": 48.6019,
+    "longitude": 1.5731
+  },
+  "areaServed": [
+    {"@type": "City", "name": "Gas"},
+    {"@type": "City", "name": "Maintenon"},
+    {"@type": "City", "name": "Chartres"},
+    {"@type": "City", "name": "Rambouillet"},
+    {"@type": "City", "name": "Épernon"},
+    {"@type": "City", "name": "Gallardon"},
+    {"@type": "City", "name": "Nogent-le-Roi"},
+    {"@type": "City", "name": "Auneau"},
+    {"@type": "City", "name": "Ablis"},
+    {"@type": "City", "name": "Houdan"},
+    {"@type": "City", "name": "Pierres"},
+    {"@type": "City", "name": "Saint-Piat"},
+    {"@type": "City", "name": "Hanches"}
+  ],
+  "priceRange": "€€",
+  "openingHours": ["Mo-Fr 09:00-18:00", "Sa 09:00-12:00"],
+  "image": "https://rt-informatique.com/opengraph.jpg"
+};
 ---
 
 <!DOCTYPE html>
@@ -34,17 +77,16 @@ const makeTitle = title
     <meta name="viewport" content="width=device-width" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="generator" content={Astro.generator} />
-    
-
+    {keywords && <meta name="keywords" content={keywords} />}
 
     <!-- <link rel="preload" as="image" href={src} alt="Hero" /> -->
     <SEO
       title={makeTitle}
-      description="RT Informatique : solutions informatiques sur mesure à Chartres, Maintenon, Rambouillet et alentours, département Eure-et-Loir 28 et Yvelines 78. Vente de matériel informatique, assistance technique, dépannage à domicile et création de sites internet pour particuliers et professionnels. Contactez un expert local pour vos besoins numériques."
+      description={metaDescription}
       canonical={canonicalURL}
       twitter={{
         creator: "ReisTech",
-        site: "@https://rt-informatique.com",
+        site: "@RTInformatique",
         card: "summary_large_image",
       }}
       openGraph={{
@@ -59,10 +101,11 @@ const makeTitle = title
         },
       }}
     />
+    <script type="application/ld+json" is:inline set:html={JSON.stringify(localBusinessJsonLd)} />
   </head>
   <body>
     <Navbar />
-    
+
     <slot />
     <Footer />
     <style is:global>

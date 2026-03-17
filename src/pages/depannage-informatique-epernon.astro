@@ -1,0 +1,88 @@
+---
+import Layout from "@layouts/Layout.astro";
+import Container from "@components/container.astro";
+import Sectionhead from "@components/sectionhead.astro";
+---
+
+<Layout
+  title="Dépannage informatique à Épernon (28230) — RT Informatique"
+  description="Assistance et dépannage informatique à Épernon (28230). RT Informatique, technicien local en Eure-et-Loir, intervient rapidement à domicile ou en entreprise à Épernon. Contactez-nous au 06 03 21 33 65."
+>
+  <Container>
+    <Sectionhead>
+      <Fragment slot="title">Dépannage informatique à Épernon (28230)</Fragment>
+      <Fragment slot="desc">Assistance informatique à Épernon et dans les environs — technicien local disponible pour particuliers et professionnels.</Fragment>
+    </Sectionhead>
+
+    <div class="mx-auto max-w-4xl mt-12">
+
+      <!-- Intro locale -->
+      <div class="mb-10">
+        <h2 class="font-bold text-2xl text-gray-800 mb-4">RT Informatique intervient à Épernon</h2>
+        <p class="text-lg leading-relaxed text-slate-500">
+          Épernon est une ville dynamique d'Eure-et-Loir, véritable carrefour entre Chartres et Rambouillet. Située à environ 10 km de Gas, elle attire de nombreuses familles et entreprises qui cherchent un cadre de vie alliant proximité des grandes agglomérations et qualité de vie rurale. RT Informatique répond aux besoins informatiques des habitants et des professionnels d'Épernon : que vous soyez artisan, commerçant, télétravailleur ou particulier, nous intervenons rapidement et efficacement pour résoudre tous vos problèmes numériques.
+        </p>
+      </div>
+
+      <!-- Services proposés -->
+      <div class="mb-10">
+        <h2 class="font-bold text-2xl text-gray-800 mb-4">Nos services à Épernon et alentours</h2>
+        <ul class="grid sm:grid-cols-2 gap-4 text-slate-600">
+          <li class="flex items-start gap-2 p-4 border border-gray-200 rounded-lg">
+            <span class="text-black font-bold">→</span>
+            <div><strong>Dépannage informatique</strong> — Diagnostic et réparation à domicile ou en entreprise</div>
+          </li>
+          <li class="flex items-start gap-2 p-4 border border-gray-200 rounded-lg">
+            <span class="text-black font-bold">→</span>
+            <div><strong>Vente de matériel</strong> — Ordinateurs, périphériques avec installation sur mesure</div>
+          </li>
+          <li class="flex items-start gap-2 p-4 border border-gray-200 rounded-lg">
+            <span class="text-black font-bold">→</span>
+            <div><strong>Maintenance & assistance</strong> — Mises à jour, monitoring, sauvegardes</div>
+          </li>
+          <li class="flex items-start gap-2 p-4 border border-gray-200 rounded-lg">
+            <span class="text-black font-bold">→</span>
+            <div><strong>Création de sites internet</strong> — Sites vitrine et e-commerce pour les pros d'Épernon</div>
+          </li>
+        </ul>
+      </div>
+
+      <!-- Zone d'intervention -->
+      <div class="mb-10 bg-gray-50 p-6 rounded-lg">
+        <h2 class="font-bold text-2xl text-gray-800 mb-4">Zone d'intervention</h2>
+        <p class="text-slate-500">RT Informatique est basé à Gas (28320) et intervient à Épernon et dans toutes les communes environnantes. La distance depuis notre base est d'environ 10 km, garantissant une intervention dans des délais raisonnables.</p>
+        <p class="mt-3 text-slate-500">Nous couvrons également : Gas, Maintenon, Hanches, Ablis et les communes limitrophes.</p>
+      </div>
+
+      <!-- FAQ locale -->
+      <div class="mb-10">
+        <h2 class="font-bold text-2xl text-gray-800 mb-4">Questions fréquentes — dépannage informatique à Épernon</h2>
+        <div class="space-y-4">
+          <div class="p-4 border border-gray-200 rounded-lg">
+            <h3 class="font-semibold text-gray-800">Intervenez-vous à domicile à Épernon ?</h3>
+            <p class="text-slate-500 mt-2">Oui, RT Informatique se déplace à domicile à Épernon et dans les communes proches pour tous types de dépannages informatiques.</p>
+          </div>
+          <div class="p-4 border border-gray-200 rounded-lg">
+            <h3 class="font-semibold text-gray-800">Quel est le délai d'intervention à Épernon ?</h3>
+            <p class="text-slate-500 mt-2">Nous nous efforçons d'intervenir sous 24 à 48h à Épernon. Pour les urgences professionnelles ou personnelles, n'hésitez pas à nous appeler directement.</p>
+          </div>
+          <div class="p-4 border border-gray-200 rounded-lg">
+            <h3 class="font-semibold text-gray-800">Pouvez-vous aider à la configuration d'un poste de télétravail à Épernon ?</h3>
+            <p class="text-slate-500 mt-2">Tout à fait. Nous accompagnons les télétravailleurs d'Épernon dans la mise en place de leur espace numérique : connexion sécurisée, VPN, outils collaboratifs, imprimantes réseau et bien plus.</p>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- CTA -->
+    <div class="text-center mt-12 mb-8">
+      <p class="text-lg text-slate-600 mb-4">Vous êtes à Épernon et avez besoin d'une assistance informatique ?</p>
+      <a href="/contact" class="inline-block px-8 py-4 bg-black text-white rounded-lg font-semibold hover:bg-gray-800 transition">
+        Demander une intervention
+      </a>
+      <p class="mt-3 text-slate-500">Ou appelez directement : <a href="tel:+33603213365" class="text-black font-semibold">06 03 21 33 65</a></p>
+    </div>
+
+  </Container>
+</Layout>

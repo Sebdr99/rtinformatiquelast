@@ -6,7 +6,7 @@ import Layout from "@layouts/Layout.astro";
 import { Icon } from "astro-icon/components";
 ---
 
-<Layout title="Contact">
+<Layout title="Contact" description="Contactez RT Informatique à Gas (près de Maintenon) — 28320 Eure-et-Loir. Dépannage, assistance informatique et création de sites internet dans le 28 et le 78.">
   <Container>
     <Sectionhead>
       <Fragment slot="title">Contact</Fragment>
@@ -21,7 +21,7 @@ import { Icon } from "astro-icon/components";
         <div class="mt-5">
           <div class="flex items-center mt-2 space-x-2 text-gray-600">
             <Icon class="text-gray-400 w-4 h-4" name="uil:map-marker" />
-            <span>Gas, 28320</span>
+            <span>Gas (près de Maintenon) — 28320 Eure-et-Loir</span>
           </div><div class="flex items-center mt-2 space-x-2 text-gray-600">
             <Icon class="text-gray-400 w-4 h-4" name="uil:envelope" /><a
               href="mailto:contact@awrt.fr"
@@ -37,6 +37,31 @@ import { Icon } from "astro-icon/components";
       <div>
         <Contactform />
       </div>
+    </div>
+
+    <div class="mx-auto max-w-4xl mt-12 bg-gray-50 border border-gray-200 rounded-lg p-8">
+      <h2 class="font-bold text-2xl text-gray-800 mb-4">Zone d'intervention</h2>
+      <p class="text-slate-500 mb-4">
+        Nous intervenons dans un rayon de 30 km autour de <strong>Gas (28320)</strong>, en Eure-et-Loir (28) et Yvelines (78). Voici les principales communes couvertes :
+      </p>
+      <ul class="grid grid-cols-2 sm:grid-cols-3 gap-2 text-slate-600 text-sm list-disc pl-5">
+        <li>Gas (siège)</li>
+        <li>Maintenon</li>
+        <li>Épernon</li>
+        <li>Chartres</li>
+        <li>Rambouillet</li>
+        <li>Gallardon</li>
+        <li>Nogent-le-Roi</li>
+        <li>Auneau</li>
+        <li>Ablis</li>
+        <li>Houdan</li>
+        <li>Pierres</li>
+        <li>Saint-Piat</li>
+        <li>Hanches</li>
+      </ul>
+      <p class="text-slate-500 mt-4 text-sm">
+        Vous n'êtes pas dans cette liste ? Contactez-nous, nous étudions chaque demande.
+      </p>
     </div>
   </Container>
 </Layout>

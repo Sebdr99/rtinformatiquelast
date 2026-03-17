@@ -1,0 +1,88 @@
+---
+import Layout from "@layouts/Layout.astro";
+import Container from "@components/container.astro";
+import Sectionhead from "@components/sectionhead.astro";
+---
+
+<Layout
+  title="Dépannage informatique à Houdan (78550) — RT Informatique"
+  description="Technicien informatique à Houdan (78550 Yvelines). RT Informatique, basé à Gas dans le 28, couvre Houdan et ses environs pour tout dépannage informatique à domicile ou en entreprise."
+>
+  <Container>
+    <Sectionhead>
+      <Fragment slot="title">Dépannage informatique à Houdan (78550)</Fragment>
+      <Fragment slot="desc">RT Informatique intervient à Houdan dans les Yvelines — assistance, dépannage et maintenance informatique à domicile et en entreprise.</Fragment>
+    </Sectionhead>
+
+    <div class="mx-auto max-w-4xl mt-12">
+
+      <!-- Intro locale -->
+      <div class="mb-10">
+        <h2 class="font-bold text-2xl text-gray-800 mb-4">RT Informatique intervient à Houdan</h2>
+        <p class="text-lg leading-relaxed text-slate-500">
+          Houdan, ville médiévale des Yvelines réputée pour ses volailles et son donjon roman classé, se situe à environ 30 km de Gas — à la limite ouest de notre zone d'intervention. Malgré cette distance, nous nous engageons à servir les habitants et les entreprises de Houdan avec le même sérieux que pour nos clients les plus proches. Artisans, commerçants, particuliers : RT Informatique se déplace à Houdan pour tout dépannage, qu'il s'agisse d'un virus tenace, d'un disque dur défaillant ou d'un réseau professionnel à restructurer.
+        </p>
+      </div>
+
+      <!-- Services proposés -->
+      <div class="mb-10">
+        <h2 class="font-bold text-2xl text-gray-800 mb-4">Nos services à Houdan et alentours</h2>
+        <ul class="grid sm:grid-cols-2 gap-4 text-slate-600">
+          <li class="flex items-start gap-2 p-4 border border-gray-200 rounded-lg">
+            <span class="text-black font-bold">→</span>
+            <div><strong>Dépannage informatique</strong> — Diagnostic et réparation à domicile ou en entreprise</div>
+          </li>
+          <li class="flex items-start gap-2 p-4 border border-gray-200 rounded-lg">
+            <span class="text-black font-bold">→</span>
+            <div><strong>Vente de matériel</strong> — Ordinateurs, périphériques avec installation sur mesure</div>
+          </li>
+          <li class="flex items-start gap-2 p-4 border border-gray-200 rounded-lg">
+            <span class="text-black font-bold">→</span>
+            <div><strong>Maintenance & assistance</strong> — Mises à jour, monitoring, sauvegardes</div>
+          </li>
+          <li class="flex items-start gap-2 p-4 border border-gray-200 rounded-lg">
+            <span class="text-black font-bold">→</span>
+            <div><strong>Création de sites internet</strong> — Sites vitrine et e-commerce</div>
+          </li>
+        </ul>
+      </div>
+
+      <!-- Zone d'intervention -->
+      <div class="mb-10 bg-gray-50 p-6 rounded-lg">
+        <h2 class="font-bold text-2xl text-gray-800 mb-4">Zone d'intervention</h2>
+        <p class="text-slate-500">RT Informatique est basé à Gas (28320, Eure-et-Loir) et intervient à Houdan et dans les communes environnantes des Yvelines. La distance depuis notre base est d'environ 30 km.</p>
+        <p class="mt-3 text-slate-500">Nous couvrons également : Ablis, Rambouillet, Épernon et les communes limitrophes de l'Eure-et-Loir et des Yvelines.</p>
+      </div>
+
+      <!-- FAQ locale -->
+      <div class="mb-10">
+        <h2 class="font-bold text-2xl text-gray-800 mb-4">Questions fréquentes — dépannage informatique à Houdan</h2>
+        <div class="space-y-4">
+          <div class="p-4 border border-gray-200 rounded-lg">
+            <h3 class="font-semibold text-gray-800">Intervenez-vous à domicile à Houdan ?</h3>
+            <p class="text-slate-500 mt-2">Oui, RT Informatique se déplace à domicile à Houdan et dans les communes proches. Bien qu'à la limite de notre zone, nous intervenons régulièrement dans le secteur.</p>
+          </div>
+          <div class="p-4 border border-gray-200 rounded-lg">
+            <h3 class="font-semibold text-gray-800">Quel est le délai d'intervention à Houdan ?</h3>
+            <p class="text-slate-500 mt-2">Nous nous efforçons d'intervenir sous 48h à Houdan. Pour les urgences, contactez-nous directement par téléphone.</p>
+          </div>
+          <div class="p-4 border border-gray-200 rounded-lg">
+            <h3 class="font-semibold text-gray-800">Proposez-vous le dépannage à distance pour les habitants de Houdan ?</h3>
+            <p class="text-slate-500 mt-2">Oui, pour éviter des déplacements inutiles, nous privilégions quand c'est possible la prise en main à distance sécurisée — particulièrement adaptée pour Houdan compte tenu de la distance.</p>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- CTA -->
+    <div class="text-center mt-12 mb-8">
+      <p class="text-lg text-slate-600 mb-4">Vous êtes à Houdan et avez besoin d'une assistance informatique ?</p>
+      <a href="/contact" class="inline-block px-8 py-4 bg-black text-white rounded-lg font-semibold hover:bg-gray-800 transition">
+        Demander une intervention
+      </a>
+      <p class="mt-3 text-slate-500">Ou appelez directement : <a href="tel:+33603213365" class="text-black font-semibold">06 03 21 33 65</a></p>
+    </div>
+
+  </Container>
+</Layout>

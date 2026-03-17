@@ -1,0 +1,88 @@
+---
+import Layout from "@layouts/Layout.astro";
+import Container from "@components/container.astro";
+import Sectionhead from "@components/sectionhead.astro";
+---
+
+<Layout
+  title="Dépannage informatique à Nogent-le-Roi (28210) — RT Informatique"
+  description="Expert informatique à Nogent-le-Roi (28210 Eure-et-Loir). RT Informatique intervient pour le dépannage, la réparation et l'assistance informatique à Nogent-le-Roi et communes voisines."
+>
+  <Container>
+    <Sectionhead>
+      <Fragment slot="title">Dépannage informatique à Nogent-le-Roi (28210)</Fragment>
+      <Fragment slot="desc">Votre technicien informatique local à Nogent-le-Roi — dépannage, réparation et assistance pour particuliers et professionnels en Eure-et-Loir.</Fragment>
+    </Sectionhead>
+
+    <div class="mx-auto max-w-4xl mt-12">
+
+      <!-- Intro locale -->
+      <div class="mb-10">
+        <h2 class="font-bold text-2xl text-gray-800 mb-4">RT Informatique intervient à Nogent-le-Roi</h2>
+        <p class="text-lg leading-relaxed text-slate-500">
+          Nogent-le-Roi est une commune d'Eure-et-Loir bordée par l'Eure, à environ 14 km de Gas. Bourg historique au charme rural, elle accueille des familles, des agriculteurs et des artisans qui ont tous des besoins informatiques croissants. RT Informatique répond présent pour chacun d'eux : que vous ayez un ordinateur qui ne démarre plus, un réseau Wi-Fi instable ou un projet de site internet pour votre activité, notre équipe se déplace directement à Nogent-le-Roi pour vous apporter une solution concrète et durable.
+        </p>
+      </div>
+
+      <!-- Services proposés -->
+      <div class="mb-10">
+        <h2 class="font-bold text-2xl text-gray-800 mb-4">Nos services à Nogent-le-Roi et alentours</h2>
+        <ul class="grid sm:grid-cols-2 gap-4 text-slate-600">
+          <li class="flex items-start gap-2 p-4 border border-gray-200 rounded-lg">
+            <span class="text-black font-bold">→</span>
+            <div><strong>Dépannage informatique</strong> — Diagnostic et réparation à domicile ou en entreprise</div>
+          </li>
+          <li class="flex items-start gap-2 p-4 border border-gray-200 rounded-lg">
+            <span class="text-black font-bold">→</span>
+            <div><strong>Vente de matériel</strong> — Ordinateurs, périphériques avec installation sur mesure</div>
+          </li>
+          <li class="flex items-start gap-2 p-4 border border-gray-200 rounded-lg">
+            <span class="text-black font-bold">→</span>
+            <div><strong>Maintenance & assistance</strong> — Mises à jour, monitoring, sauvegardes</div>
+          </li>
+          <li class="flex items-start gap-2 p-4 border border-gray-200 rounded-lg">
+            <span class="text-black font-bold">→</span>
+            <div><strong>Création de sites internet</strong> — Sites vitrine et e-commerce</div>
+          </li>
+        </ul>
+      </div>
+
+      <!-- Zone d'intervention -->
+      <div class="mb-10 bg-gray-50 p-6 rounded-lg">
+        <h2 class="font-bold text-2xl text-gray-800 mb-4">Zone d'intervention</h2>
+        <p class="text-slate-500">RT Informatique est basé à Gas (28320) et intervient à Nogent-le-Roi et dans toutes les communes environnantes. La distance depuis notre base est d'environ 14 km.</p>
+        <p class="mt-3 text-slate-500">Nous couvrons également : Gas, Maintenon, Épernon, Anet et le bassin de la vallée de l'Eure.</p>
+      </div>
+
+      <!-- FAQ locale -->
+      <div class="mb-10">
+        <h2 class="font-bold text-2xl text-gray-800 mb-4">Questions fréquentes — dépannage informatique à Nogent-le-Roi</h2>
+        <div class="space-y-4">
+          <div class="p-4 border border-gray-200 rounded-lg">
+            <h3 class="font-semibold text-gray-800">Intervenez-vous à domicile à Nogent-le-Roi ?</h3>
+            <p class="text-slate-500 mt-2">Oui, RT Informatique se déplace à domicile à Nogent-le-Roi et dans les communes proches pour tous types de dépannages informatiques.</p>
+          </div>
+          <div class="p-4 border border-gray-200 rounded-lg">
+            <h3 class="font-semibold text-gray-800">Quel est le délai d'intervention à Nogent-le-Roi ?</h3>
+            <p class="text-slate-500 mt-2">Nous nous efforçons d'intervenir sous 24 à 48h à Nogent-le-Roi. Pour les urgences, contactez-nous directement par téléphone.</p>
+          </div>
+          <div class="p-4 border border-gray-200 rounded-lg">
+            <h3 class="font-semibold text-gray-800">Récupérez-vous les données perdues pour les habitants de Nogent-le-Roi ?</h3>
+            <p class="text-slate-500 mt-2">Oui, nous proposons un service de récupération de données sur disques durs défaillants, clés USB et supports endommagés. Contactez-nous en urgence en cas de perte de données importante.</p>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- CTA -->
+    <div class="text-center mt-12 mb-8">
+      <p class="text-lg text-slate-600 mb-4">Vous êtes à Nogent-le-Roi et avez besoin d'une assistance informatique ?</p>
+      <a href="/contact" class="inline-block px-8 py-4 bg-black text-white rounded-lg font-semibold hover:bg-gray-800 transition">
+        Demander une intervention
+      </a>
+      <p class="mt-3 text-slate-500">Ou appelez directement : <a href="tel:+33603213365" class="text-black font-semibold">06 03 21 33 65</a></p>
+    </div>
+
+  </Container>
+</Layout>

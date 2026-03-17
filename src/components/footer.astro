@@ -1,25 +1,61 @@
-<footer class="my-20">
-  <p class="text-center text-sm text-slate-500">
-    Copyright © {new Date().getFullYear()} ReisTech. Tout droit reservé.
-  </p>
-  
-  <p class="text-center text-xs text-slate-500 mt-1">
-    Fait par<a
-      href="https://rt-informatique.com"
-      target="_blank"
-      rel="noopener"
-      class="hover:underline">
-      ReisTech
-    </a>
-  </p>
+<footer class="bg-gray-50 border-t border-gray-200 mt-20 pt-12 pb-8">
+  <div class="max-w-6xl mx-auto px-4 grid grid-cols-1 md:grid-cols-3 gap-10">
 
-  <p class="text-center text-xs text-slate-500 mt-1">
-    <a
-      href="/mentions-legales"
-      target="_blank"
-      rel="noopener"
-      class="hover:underline">
-      Mentions légales
-    </a>
-  </p>
+    <!-- Colonne 1 : Infos société -->
+    <div>
+      <h3 class="font-bold text-gray-800 text-lg mb-3">RT Informatique</h3>
+      <ul class="space-y-2 text-sm text-slate-600">
+        <li class="flex items-start gap-2">
+          <span>11 route des Moineaux</span>
+        </li>
+        <li>Gas — 28320 Eure-et-Loir</li>
+        <li>
+          <a href="tel:+33603213365" class="hover:underline text-slate-700">
+            06 03 21 33 65
+          </a>
+        </li>
+        <li>
+          <a href="mailto:contact@awrt.fr" class="hover:underline text-slate-700">
+            contact@awrt.fr
+          </a>
+        </li>
+      </ul>
+      <p class="mt-3 text-xs text-slate-400">Lun–Ven : 9h–18h · Sam : 9h–12h</p>
+    </div>
+
+    <!-- Colonne 2 : Navigation -->
+    <div>
+      <h3 class="font-bold text-gray-800 text-lg mb-3">Navigation</h3>
+      <ul class="space-y-2 text-sm text-slate-600">
+        <li><a href="/" class="hover:underline">Accueil</a></li>
+        <li><a href="/nos-services" class="hover:underline">Nos services</a></li>
+        <li><a href="/a-propos" class="hover:underline">À propos</a></li>
+        <li><a href="/particuliers" class="hover:underline">Particuliers</a></li>
+        <li><a href="/professionnels" class="hover:underline">Professionnels</a></li>
+        <li><a href="/contact" class="hover:underline">Contact</a></li>
+      </ul>
+    </div>
+
+    <!-- Colonne 3 : Zones d'intervention -->
+    <div>
+      <h3 class="font-bold text-gray-800 text-lg mb-3">Zones d'intervention</h3>
+      <ul class="space-y-2 text-sm text-slate-600">
+        <li><a href="/zones-intervention" class="hover:underline">Maintenon</a></li>
+        <li><a href="/zones-intervention" class="hover:underline">Épernon</a></li>
+        <li><a href="/zones-intervention" class="hover:underline">Chartres</a></li>
+        <li><a href="/zones-intervention" class="hover:underline">Rambouillet</a></li>
+        <li><a href="/zones-intervention" class="hover:underline">Gallardon</a></li>
+        <li><a href="/zones-intervention" class="hover:underline">et 30km alentour (28 &amp; 78)</a></li>
+      </ul>
+    </div>
+
+  </div>
+
+  <div class="max-w-6xl mx-auto px-4 mt-10 border-t border-gray-200 pt-6 flex flex-col sm:flex-row justify-between items-center gap-2 text-xs text-slate-500">
+    <p>Copyright &copy; {new Date().getFullYear()} RT Informatique. Tous droits réservés.</p>
+    <div class="flex gap-4">
+      <a href="/mentions-legales" class="hover:underline">Mentions légales</a>
+      <a href="https://rt-informatique.com" target="_blank" rel="noopener" class="hover:underline">rt-informatique.com</a>
+    </div>
+  </div>
 </footer>
