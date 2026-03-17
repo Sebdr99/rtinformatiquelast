@@ -2,20 +2,205 @@
 import Container from "@components/container.astro";
 import Cta from "@components/cta.astro";
 import Featuresprofessionnels from "@components/featuresprofessionnels.astro";
-import Sectionhead from "@components/sectionhead.astro"
-import Hero from "@components/hero.astro";
-import Logos from "@components/logos.astro";
 import Layout from "@layouts/Layout.astro";
+import Link from "@components/ui/link.astro";
+// @ts-ignore
+import { Icon } from "astro-icon/components";
+
+const painPoints = [
+  "Gérer vous-même les pannes et les mises à jour",
+  "Ne pas savoir si vos données sont vraiment sécurisées",
+  "Perdre du temps précieux sur des problèmes informatiques",
+  "Subir des dépannages coûteux et imprévisibles à l'acte",
+];
+
+const offres = [
+  {
+    name: "Essentiel",
+    description: "Pour les indépendants et très petites structures",
+    features: [
+      "Maintenance préventive mensuelle",
+      "Support téléphonique en heures ouvrées",
+      "Mises à jour système et sécurité",
+      "Sauvegarde vérifiée régulièrement",
+      "Antivirus managé",
+    ],
+    popular: false,
+    cta: "Demander un devis",
+  },
+  {
+    name: "Pro",
+    description: "Pour les PME jusqu'à 20 postes",
+    features: [
+      "Tout l'offre Essentiel",
+      "Monitoring 24/7",
+      "Intervention sur site sous 4h",
+      "Administration Microsoft 365",
+      "Audit de sécurité annuel",
+      "Plan de reprise d'activité",
+    ],
+    popular: true,
+    cta: "Demander un devis",
+  },
+  {
+    name: "Sur-mesure",
+    description: "Pour les entreprises avec infrastructure complexe",
+    features: [
+      "Tout l'offre Pro",
+      "Infrastructure serveur dédiée",
+      "Téléphonie IP / Teams Phone",
+      "Formation des équipes",
+      "Reporting mensuel détaillé",
+      "Interlocuteur dédié",
+    ],
+    popular: false,
+    cta: "Nous contacter",
+  },
+];
+
+const etapes = [
+  {
+    num: "01",
+    title: "Audit gratuit",
+    desc: "On analyse votre infrastructure existante et vos besoins réels, sans engagement.",
+    icon: "bx:bx-search-alt",
+  },
+  {
+    num: "02",
+    title: "Proposition adaptée",
+    desc: "On vous présente une offre sur-mesure claire, transparente et sans jargon.",
+    icon: "bx:bx-file",
+  },
+  {
+    num: "03",
+    title: "Déploiement",
+    desc: "Mise en place des outils, sécurisation de l'environnement et prise en main.",
+    icon: "bx:bx-rocket",
+  },
+  {
+    num: "04",
+    title: "Suivi continu",
+    desc: "On gère, surveille et optimise votre IT au quotidien. Vous appelez, on répond.",
+    icon: "bx:bx-line-chart",
+  },
+];
 ---
 
-<Layout title="Solutions informatiques pour professionnels — Eure-et-Loir | RT Informatique" description="Audit, maintenance, développement et transformation digitale pour les PME et artisans du 28 Eure-et-Loir et du 78 Yvelines. RT Informatique, votre partenaire informatique local.">
+<Layout
+  title="Infogérance et DSI externalisé pour PME — Eure-et-Loir (28) | RT Informatique"
+  description="RT Informatique, votre DSI externalisé en Eure-et-Loir et Yvelines. Infogérance complète : maintenance, cybersécurité, Microsoft 365, monitoring 24/7 pour les PME et artisans du 28 et 78.">
   <Container>
-    <Sectionhead>
-      <Fragment slot="title">Des solutions informatiques pour les professionnels
-      </Fragment>
 
-    </Sectionhead>
-    <Featuresprofessionnels />
+    <!-- Hero -->
+    <div class="mt-16 text-center">
+      <span class="text-sm font-semibold text-slate-500 tracking-widest uppercase">
+        Infogérance & DSI externalisé
+      </span>
+      <h1 class="text-4xl lg:text-5xl xl:text-6xl font-bold lg:tracking-tight mt-4">
+        Externalisez votre IT.<br />Concentrez-vous sur votre métier.
+      </h1>
+      <p class="text-lg mt-6 text-slate-600 max-w-2xl mx-auto">
+        RT Informatique devient votre DSI externalisé : un seul interlocuteur pour toute votre
+        informatique, en Eure-et-Loir (28) et Yvelines (78). Contrats mensuels sans surprise,
+        interventions rapides, tranquillité d'esprit garantie.
+      </p>
+      <div class="flex justify-center flex-wrap gap-4 mt-8">
+        <Link href="/contact">Demander un audit gratuit</Link>
+        <Link href="#offres" style="outline">Voir nos offres</Link>
+      </div>
+    </div>
+
+    <!-- Pain points -->
+    <div class="mt-24 bg-slate-50 rounded-2xl p-10 md:p-16">
+      <h2 class="text-3xl font-bold text-center mb-10">Vous en avez assez de...</h2>
+      <div class="grid sm:grid-cols-2 gap-6 max-w-2xl mx-auto">
+        {
+          painPoints.map((point) => (
+            <div class="flex items-start gap-3">
+              <div class="mt-0.5 shrink-0 text-red-500">
+                <Icon name="bx:bx-x-circle" class="w-5 h-5" />
+              </div>
+              <p class="text-slate-700">{point}</p>
+            </div>
+          ))
+        }
+      </div>
+      <p class="text-center mt-10 text-lg font-semibold text-slate-800">
+        → On s'occupe de tout. Vous vous concentrez sur votre activité.
+      </p>
+    </div>
+
+    <!-- Offres -->
+    <div id="offres" class="mt-24">
+      <h2 class="text-3xl font-bold text-center">Nos offres d'infogérance</h2>
+      <p class="text-slate-500 text-center mt-3">
+        Tarifs établis sur devis selon votre nombre de postes et vos besoins spécifiques.
+      </p>
+      <div class="grid md:grid-cols-3 gap-8 mt-12">
+        {
+          offres.map((offre) => (
+            <div
+              class:list={[
+                "flex flex-col border-2 rounded-xl p-8",
+                offre.popular ? "border-black" : "border-slate-200",
+              ]}>
+              {offre.popular && (
+                <span class="text-xs font-bold bg-black text-white rounded-full px-3 py-1 self-start mb-4">
+                  Recommandé
+                </span>
+              )}
+              <h3 class="text-xl font-bold">{offre.name}</h3>
+              <p class="text-slate-500 text-sm mt-1">{offre.description}</p>
+              <ul class="mt-6 space-y-3 flex-1">
+                {offre.features.map((f) => (
+                  <li class="flex items-start gap-2 text-slate-700 text-sm">
+                    <Icon name="bx:bx-check" class="w-5 h-5 shrink-0 mt-0.5 text-green-600" />
+                    {f}
+                  </li>
+                ))}
+              </ul>
+              <div class="mt-8">
+                <Link
+                  href="/contact"
+                  block
+                  style={offre.popular ? "primary" : "outline"}>
+                  {offre.cta}
+                </Link>
+              </div>
+            </div>
+          ))
+        }
+      </div>
+    </div>
+
+    <!-- Ce qui est inclus -->
+    <div class="mt-24">
+      <h2 class="text-3xl font-bold text-center">Tout ce que vous obtenez</h2>
+      <p class="text-slate-500 text-center mt-3 max-w-xl mx-auto">
+        Une couverture complète de votre informatique, sans mauvaise surprise.
+      </p>
+      <Featuresprofessionnels />
+    </div>
+
+    <!-- Processus -->
+    <div class="mt-24">
+      <h2 class="text-3xl font-bold text-center">Comment ça marche ?</h2>
+      <div class="grid sm:grid-cols-2 md:grid-cols-4 gap-8 mt-12">
+        {
+          etapes.map((etape) => (
+            <div class="text-center">
+              <div class="inline-flex items-center justify-center w-14 h-14 rounded-full bg-black text-white mb-4">
+                <Icon name={etape.icon} class="w-6 h-6" />
+              </div>
+              <div class="text-xs font-bold text-slate-400 mb-1">{etape.num}</div>
+              <h3 class="font-semibold text-lg">{etape.title}</h3>
+              <p class="text-slate-500 text-sm mt-2">{etape.desc}</p>
+            </div>
+          ))
+        }
+      </div>
+    </div>
+
     <Cta />
   </Container>
 </Layout>
